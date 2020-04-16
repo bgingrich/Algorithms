@@ -3,8 +3,16 @@
 import sys
 
 def rock_paper_scissors(n):
-  pass 
-
+  plays = ['rock', 'paper', 'scissors']
+  allPlays = [[]]
+  for i in range(n):
+    newPlays = []
+    for a in allPlays:
+      for p in plays:
+        newPlay = a + [p]
+        newPlays.append(newPlay)
+    allPlays = newPlays
+  return allPlays  
 
 if __name__ == "__main__":
   if len(sys.argv) > 1:
